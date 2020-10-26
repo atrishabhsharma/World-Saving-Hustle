@@ -1,0 +1,17 @@
+import 'package:WSH/utils/constants.dart';
+import 'package:flutter/material.dart';
+
+class LandingPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Stack(
+        children: [
+          Expanded(child: Image.asset(Images.anyImage + '/background.png')),
+
+          
+        ],
+      ),
+    );
+  }
+} 
