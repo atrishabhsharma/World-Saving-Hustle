@@ -4,13 +4,18 @@ import 'package:flutter/material.dart';
 class AppButtons extends StatelessWidget {
   final String title;
   final Function onpressed;
-  AppButtons({@required this.title, @required this.onpressed});
+  final double height, width;
+  AppButtons(
+      {@required this.title,
+      @required this.onpressed,
+      this.height,
+      this.width});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200.0,
-      height: 40.0,
+      width: width,
+      height: height,
       child: RaisedButton(
           color: Colors.white,
           elevation: 7,

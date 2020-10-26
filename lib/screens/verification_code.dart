@@ -4,7 +4,7 @@ import 'package:WSH/widgets/buttons.dart';
 import 'package:WSH/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 
-class FeedBack extends StatelessWidget {
+class VerificationCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -40,47 +40,66 @@ class FeedBack extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 90,
+                      height: 120,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 15),
+                    Text(
+                      'Ah, Registered!',
+                      style: appText.copyWith(
+                          fontSize: 40,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: 'Product Sans'),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Center(
                       child: Text(
-                        'Write to Us ;)',
+                        Strings.verificationCode,
                         style: appText.copyWith(
-                            fontSize: 40,
+                            fontSize: 20,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Product Sans'),
                       ),
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 40,
                     ),
                     AppTextField(
-                      title: '     Subject',
+                      title: '     Code',
                       icon: null,
                       height: 40,
                       width: 250,
                     ),
-                    SizedBox(
-                      height: 15,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 40),
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: FlatButton(
+                          child: Text(
+                            'Send Again',
+                            style: appText.copyWith(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: 'Product Sans'),
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
                     ),
-                    AppTextField(
-                      title: '     Messages',
-                      icon: null,
-                      height: 150,
-                      width: 250,
+                    SizedBox(
+                      height: 20,
                     ),
                     SizedBox(
                       height: 30,
                     ),
                     AppButtons(
-                      title: 'SEND',
+                      title: 'LOGIN',
                       onpressed: null,
                       width: 150,
                       height: 40, // add function
                     ),
                     SizedBox(
-                      height: 80,
+                      height: 70,
                     ),
                     Container(
                       padding: EdgeInsets.only(left: 15, right: 15),
