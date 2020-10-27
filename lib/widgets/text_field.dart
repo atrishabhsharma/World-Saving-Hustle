@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//ODO: bring cursor to right a bit
 class AppTextField extends StatelessWidget {
   final String title;
   final Icon icon;

@@ -23,6 +23,19 @@ class VerificationCode extends StatelessWidget {
                     fit: BoxFit.fill,
                   ),
                 ),
+                // TODO: second element of stack
+                Container(
+                  padding: EdgeInsets.only(top: 620, left: 15, right: 15),
+                  child: Center(
+                    child: Text(
+                      Strings.wsh,
+                      style: appText.copyWith(
+                          fontFamily: 'Product Sans',
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ),
                 Column(
                   children: [
                     Padding(
@@ -100,18 +113,6 @@ class VerificationCode extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 70,
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 15, right: 15),
-                      child: Center(
-                        child: Text(
-                          Strings.wsh,
-                          style: appText.copyWith(
-                              fontFamily: 'Product Sans',
-                              fontSize: 24,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
                     ),
                   ],
                 )

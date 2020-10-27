@@ -1,4 +1,10 @@
 import 'package:WSH/screens/LandingPage.dart';
+import 'package:WSH/screens/Login.dart';
+import 'package:WSH/screens/calender.dart';
+import 'package:WSH/screens/feedback.dart';
+import 'package:WSH/screens/find_an_event.dart';
+import 'package:WSH/screens/signup.dart';
+import 'package:WSH/screens/verification_code.dart';
 import 'package:WSH/utils/config.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +21,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'World Saving Hustle',
-          home: LandingPage(),
+          home: Calender(),
         );
       });
     });

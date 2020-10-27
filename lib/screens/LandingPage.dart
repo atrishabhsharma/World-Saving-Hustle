@@ -21,6 +21,19 @@ class LandingPage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+              // TODO: second element of stack
+              Container(
+                padding: EdgeInsets.only(top: 620, left: 15, right: 15),
+                child: Center(
+                  child: Text(
+                    Strings.wsh,
+                    style: appText.copyWith(
+                        fontFamily: 'Product Sans',
+                        fontSize: 24,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -67,18 +80,6 @@ class LandingPage extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 100, // add logic
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(left: 15, right: 15),
-                    child: Center(
-                      child: Text(
-                        Strings.wsh,
-                        style: appText.copyWith(
-                            fontFamily: 'Product Sans',
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ),
                   ),
                 ],
               ),

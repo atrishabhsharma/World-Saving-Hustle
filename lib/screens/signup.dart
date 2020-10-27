@@ -4,7 +4,7 @@ import 'package:WSH/widgets/buttons.dart';
 import 'package:WSH/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 
-class LogIn extends StatelessWidget {
+class Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -50,12 +50,9 @@ class LogIn extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 120,
-                    ),
                     Center(
                       child: Text(
-                        'Login!',
+                        'Signup!',
                         style: appText.copyWith(
                             fontSize: 40,
                             fontWeight: FontWeight.w500,
@@ -66,34 +63,90 @@ class LogIn extends StatelessWidget {
                       height: 40,
                     ),
                     AppTextField(
+                      title: '     Name',
+                      icon: Icon(Icons.person),
+                      height: 45,
+                      width: 290,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    AppTextField(
+                      title: '     Phone Number',
+                      icon: Icon(Icons.call),
+                      height: 45,
+                      width: 290,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    AppTextField(
                       title: '     Email ID',
-                      icon: Icon(Icons.email_outlined),
+                      icon: Icon(Icons.email),
+                      height: 45,
+                      width: 290,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    AppTextField(
+                      title: '     Password',
+                      icon: Icon(Icons.lock),
+                      height: 45,
+                      width: 290,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    AppTextField(
+                      title: '     Confirm Password',
+                      icon: Icon(Icons.verified),
                       height: 45,
                       width: 290,
                     ),
                     SizedBox(
                       height: 20,
                     ),
-                    AppTextField(
-                      title: '     Password',
-                      icon: Icon(Icons.lock_open_outlined),
-                      height: 45,
-                      width: 290,
-                    ),
-                    SizedBox(
-                      height: 50,
-                    ),
                     AppButtons(
-                      title: 'LOGIN',
+                      title: 'SIGNUP',
                       onpressed: null,
                       width: 150,
                       height: 40, // add function
                     ),
                     SizedBox(
-                      height: 130,
+                      height: 10,
                     ),
+                    Center(
+                        child: Text(
+                      '-OR-',
+                      style: appText.copyWith(fontSize: 20),
+                    )),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Center(
+                        child: Text(
+                      'Sign in With',
+                      style: appText.copyWith(fontSize: 15),
+                    )),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FlatButton(
+                            onPressed: () {},
+                            child:
+                                Image.asset(Images.anyImage + '/facebook.png')),
+                        FlatButton(
+                            onPressed: () {},
+                            child:
+                                Image.asset(Images.anyImage + '/google.png')),
+                      ],
+                    )
                   ],
-                )
+                ),
               ],
             ),
           ),
