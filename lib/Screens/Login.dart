@@ -21,7 +21,6 @@ class LogIn extends StatelessWidget {
                   child: Image.asset(Images.anyImage + '/background.png',
                       fit: BoxFit.fill),
                 ),
-                // TODO: second element of stack
                 Container(
                   padding: EdgeInsets.only(top: 620, left: 15, right: 15),
                   child: Center(
