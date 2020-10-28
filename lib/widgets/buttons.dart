@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppButtons extends StatelessWidget {
   final String title;
-  final Function onpressed;
+  final String onpressed;
   final double height, width;
   AppButtons(
       {@required this.title,
@@ -30,7 +30,9 @@ class AppButtons extends StatelessWidget {
                 fontWeight: FontWeight.w700,
                 fontSize: 24), // add Logic
           ),
-          onPressed: () => onpressed),
+          onPressed: () {
+            Navigator.pushNamed(context, onpressed);
+          }),
     );
   }
 }

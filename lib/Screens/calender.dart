@@ -8,35 +8,24 @@ class Calender extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[800],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                margin: EdgeInsets.only(left: 72),
-                child: Center(
-                  child: Text(
-                    'Calender',
-                    style: appText.copyWith(
-                        fontSize: 24, fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                margin: EdgeInsets.only(left: 40),
-                child: FlatButton(
-                  onPressed: null,
-                  child: Image.asset(Images.anyImage + '/appbaricon.png'),
-                ),
-              ),
-            ),
-          ],
+        title: Text(
+          "My Profile",
+          textAlign: TextAlign.center,
+          style: appText.copyWith(
+              fontSize: 24,
+              fontWeight: FontWeight.w400,
+              fontFamily: 'Product Sans'),
         ),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () => [],
+            icon: Image.asset(
+              Images.anyImage + "/appbaricon.png",
+            ),
+          ),
+        ],
+        backgroundColor: Color.fromARGB(255, 37, 37, 37),
       ),
       body: Container(
         child: Stack(

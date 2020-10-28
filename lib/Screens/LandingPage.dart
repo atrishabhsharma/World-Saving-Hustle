@@ -67,7 +67,7 @@ class LandingPage extends StatelessWidget {
                   ),
                   AppButtons(
                     title: 'LOG IN',
-                    onpressed: null,
+                    onpressed: 'loginpage',
                     width: 200, // add function
                   ),
                   SizedBox(
@@ -75,7 +75,7 @@ class LandingPage extends StatelessWidget {
                   ),
                   AppButtons(
                     title: 'SIGN IN',
-                    onpressed: null,
+                    onpressed: 'signuppage',
                     width: 200, // add function
                   ),
                   SizedBox(

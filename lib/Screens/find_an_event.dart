@@ -1,5 +1,6 @@
 import 'package:WSH/utils/constants.dart';
 import 'package:WSH/utils/style.dart';
+import 'package:WSH/widgets/bottom_navigation_bar.dart';
 import 'package:WSH/widgets/event_container.dart';
 import 'package:WSH/widgets/filterBy_widget.dart';
 import 'package:WSH/widgets/text_field.dart';
@@ -10,33 +11,24 @@ class FindAnEvent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[800],
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                margin: EdgeInsets.only(left: 72),
-                child: Text(
-                  'Find an Event',
-                  style: appText.copyWith(
-                      fontSize: 24, fontWeight: FontWeight.w600),
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                margin: EdgeInsets.only(left: 40),
-                child: FlatButton(
-                  onPressed: null,
-                  child: Image.asset(Images.anyImage + '/appbaricon.png'),
-                ),
-              ),
-            ),
-          ],
+        title: Text(
+          "My Profile",
+          textAlign: TextAlign.center,
+          style: appText.copyWith(
+              fontSize: 24,
+              fontWeight: FontWeight.w400,
+              fontFamily: 'Product Sans'),
         ),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () => [],
+            icon: Image.asset(
+              Images.anyImage + "/appbaricon.png",
+            ),
+          ),
+        ],
+        backgroundColor: Color.fromARGB(255, 37, 37, 37),
       ),
       body: Container(
         child: Stack(
@@ -74,29 +66,27 @@ class FindAnEvent extends StatelessWidget {
                     )
                   ],
                 ),
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Filter By :',
-                        style: appText.copyWith(
-                            fontSize: 24, fontWeight: FontWeight.w400),
-                      ),
-                      FilterByWidget(
-                        title: 'Distance',
-                        onPressed: null,
-                      ),
-                      FilterByWidget(
-                        title: 'Date',
-                        onPressed: null,
-                      ),
-                    ],
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Filter By :',
+                      style: appText.copyWith(
+                          fontSize: 24, fontWeight: FontWeight.w400),
+                    ),
+                    FilterByWidget(
+                      title: 'Distance',
+                      onPressed: null,
+                    ),
+                    FilterByWidget(
+                      title: 'Date',
+                      onPressed: null,
+                    ),
+                  ],
                 ),
                 Container(
                   //TOD0: Dynamic change (needed)_
-                  height: 470,
+                  height: 410,
                   child: ListView.builder(
                       itemCount: 6,
                       itemBuilder: (context, index) {
@@ -110,6 +100,7 @@ class FindAnEvent extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: AppBottomNavigation(),
     );
   }
 }

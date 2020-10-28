@@ -1,12 +1,16 @@
-import 'package:WSH/screens/LandingPage.dart';
-import 'package:WSH/screens/Login.dart';
-import 'package:WSH/screens/calender.dart';
-import 'package:WSH/screens/feedback.dart';
-import 'package:WSH/screens/find_an_event.dart';
-import 'package:WSH/screens/signup.dart';
-import 'package:WSH/screens/verification_code.dart';
+import 'package:WSH/Screens/LandingPage.dart';
+import 'package:WSH/Screens/Login.dart';
+import 'package:WSH/Screens/Register.dart';
+import 'package:WSH/Screens/calender.dart';
+import 'package:WSH/Screens/feedback.dart';
+import 'package:WSH/Screens/find_an_event.dart';
+import 'package:WSH/Screens/my_profile.dart';
+import 'package:WSH/Screens/pick_bag.dart';
+import 'package:WSH/Screens/signup.dart';
+import 'package:WSH/Screens/verification_code.dart';
 import 'package:WSH/utils/config.dart';
 import 'package:flutter/material.dart';
+import 'Screens/event.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +25,21 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'World Saving Hustle',
-          home: Calender(),
+          initialRoute: 'landingpage',
+          routes: {
+            'landingpage': (context) => LandingPage(),
+            'loginpage': (context) => LogIn(),
+            'signuppage': (context) => Signup(),
+            'verificationcodepage': (context) => VerificationCode(),
+            'myprofileppage': (context) => MyProfile(),
+            'findaneventpage': (context) => FindAnEvent(),
+            'calenderpage': (context) => Calender(),
+            'registerpage': (context) => Register(),
+            'pickabagpage': (context) => Pickabag(),
+            'eventpage': (context) => Event(),
+            'feedbackpage': (context) => FeedBack(),
+          },
+          //home: Register(),
         );
       });
     });
