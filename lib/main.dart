@@ -25,30 +25,13 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'World Saving Hustle',
-          home: FindAnEvent(),
-        );
-      });
-    });
-  }
-}
-
-
-/*class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      return OrientationBuilder(builder: (context, orientation) {
-        SizeConfig().init(constraints, orientation);
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'World Saving Hustle',
           initialRoute: 'landingpage',
           routes: {
             'landingpage': (context) => LandingPage(),
             'loginpage': (context) => LogIn(),
             'signuppage': (context) => Signup(),
             'verificationcodepage': (context) => VerificationCode(),
-            'myprofileppage': (context) => MyProfile(),
+            'myprofilepage': (context) => MyProfile(),
             'findaneventpage': (context) => FindAnEvent(),
             'calenderpage': (context) => Calender(),
             'registerpage': (context) => Register(),
@@ -56,10 +39,9 @@ class MyApp extends StatelessWidget {
             'eventpage': (context) => Event(),
             'feedbackpage': (context) => FeedBack(),
           },
-          //home: Register(),
+          //  home: PageView(),
         );
       });
     });
   }
 }
-*/

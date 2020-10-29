@@ -41,11 +41,14 @@ class Signup extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 5.95 * SizeConfig.vmultiplier),
+                      padding:
+                          EdgeInsets.only(top: 5.95 * SizeConfig.vmultiplier),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                           child: Icon(
                             Icons.navigate_before,
                             color: Colors.white,
@@ -67,7 +70,7 @@ class Signup extends StatelessWidget {
                       height: 5.95 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Name',
+                      title: 'Name',
                       icon: Icon(Icons.person),
                       height: 6.69 * SizeConfig.vmultiplier,
                       width: 80.5 * SizeConfig.hmultiplier,
@@ -76,7 +79,7 @@ class Signup extends StatelessWidget {
                       height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Phone Number',
+                      title: 'Phone Number',
                       icon: Icon(Icons.call),
                       height: 6.69 * SizeConfig.vmultiplier,
                       width: 80.5 * SizeConfig.hmultiplier,
@@ -85,7 +88,7 @@ class Signup extends StatelessWidget {
                       height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Email ID',
+                      title: 'Email ID',
                       icon: Icon(Icons.email),
                       height: 6.69 * SizeConfig.vmultiplier,
                       width: 80.5 * SizeConfig.hmultiplier,
@@ -94,7 +97,7 @@ class Signup extends StatelessWidget {
                       height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Password',
+                      title: 'Password',
                       icon: Icon(Icons.lock),
                       height: 6.69 * SizeConfig.vmultiplier,
                       width: 80.5 * SizeConfig.hmultiplier,
@@ -113,7 +116,7 @@ class Signup extends StatelessWidget {
                     ),
                     AppButtons(
                       title: 'SIGNUP',
-                      onpressed: null,
+                      onpressed: 'verificationcodepage',
                       width: 41.6 * SizeConfig.hmultiplier,
                       height: 5.95 * SizeConfig.vmultiplier, // add function
                     ),
@@ -123,7 +126,8 @@ class Signup extends StatelessWidget {
                     Center(
                         child: Text(
                       '-OR-',
-                      style: appText.copyWith(fontSize: 5.55 * SizeConfig.hmultiplier),
+                      style: appText.copyWith(
+                          fontSize: 5.55 * SizeConfig.hmultiplier),
                     )),
                     SizedBox(
                       height: 1.48 * SizeConfig.vmultiplier,
@@ -131,7 +135,8 @@ class Signup extends StatelessWidget {
                     Center(
                         child: Text(
                       'Sign in With',
-                      style: appText.copyWith(fontSize: 4.16 * SizeConfig.hmultiplier),
+                      style: appText.copyWith(
+                          fontSize: 4.16 * SizeConfig.hmultiplier),
                     )),
                     SizedBox(
                       height: 1.48 * SizeConfig.vmultiplier,

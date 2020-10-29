@@ -12,6 +12,7 @@ class FindAnEvent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         title: Text(
           "My Profile",
           textAlign: TextAlign.center,
@@ -23,7 +24,8 @@ class FindAnEvent extends StatelessWidget {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () => [],
+            onPressed: () =>
+                Navigator.pushReplacementNamed(context, 'feedbackpage'),
             icon: Image.asset(
               Images.anyImage + "/appbaricon.png",
             ),
@@ -49,10 +51,11 @@ class FindAnEvent extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.only(
-                          top: 3.72 * SizeConfig.vmultiplier,
-                          left: 4.16 * SizeConfig.hmultiplier,),
+                        top: 3.72 * SizeConfig.vmultiplier,
+                        left: 4.16 * SizeConfig.hmultiplier,
+                      ),
                       child: AppTextField(
-                        title: '     Search...',
+                        title: 'Search...',
                         icon: null,
                         height: 3.72 * SizeConfig.vmultiplier,
                         width: 69.44 * SizeConfig.hmultiplier,
@@ -63,7 +66,10 @@ class FindAnEvent extends StatelessWidget {
                         top: 3.72 * SizeConfig.vmultiplier,
                       ),
                       child: FlatButton(
-                        onPressed: null,
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                              context, 'calenderpage');
+                        },
                         child: Image.asset(Images.anyImage + '/calendar.png'),
                       ),
                     )
@@ -75,7 +81,8 @@ class FindAnEvent extends StatelessWidget {
                     Text(
                       'Filter By :',
                       style: appText.copyWith(
-                          fontSize: 6.66 * SizeConfig.hmultiplier, fontWeight: FontWeight.w400),
+                          fontSize: 6.66 * SizeConfig.hmultiplier,
+                          fontWeight: FontWeight.w400),
                     ),
                     FilterByWidget(
                       title: 'Distance',

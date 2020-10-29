@@ -4,7 +4,6 @@ import 'package:WSH/utils/style.dart';
 import 'package:WSH/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
-//TODO: Check this for refrenceee
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,6 @@ class LandingPage extends StatelessWidget {
                 ),
                 Container(
                   margin: EdgeInsets.only(
-                    //TODO: sizeConfig applied
                     top: 92.2 * SizeConfig.vmultiplier,
                     left: 11.1 * SizeConfig.hmultiplier,
                     right: 11.1 * SizeConfig.hmultiplier,

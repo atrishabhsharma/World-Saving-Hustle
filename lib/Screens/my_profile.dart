@@ -1,5 +1,6 @@
 import 'package:WSH/utils/constants.dart';
 import 'package:WSH/utils/style.dart';
+import 'package:WSH/widgets/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:WSH/utils/config.dart';
 
@@ -9,6 +10,7 @@ class MyProfile extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: Container(),
           title: Text(
             "My Profile",
             textAlign: TextAlign.center,
@@ -20,7 +22,8 @@ class MyProfile extends StatelessWidget {
           centerTitle: true,
           actions: [
             IconButton(
-              onPressed: () => [],
+              onPressed: () =>
+                  Navigator.pushReplacementNamed(context, 'feedbackpage'),
               icon: Image.asset(
                 Images.anyImage + "/appbaricon.png",
               ),
@@ -67,7 +70,9 @@ class MyProfile extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                    margin: EdgeInsets.only(left: 18.05 * SizeConfig.hmultiplier,),
+                    margin: EdgeInsets.only(
+                      left: 18.05 * SizeConfig.hmultiplier,
+                    ),
                     child: Text(
                       'You have picked',
                       style: appText.copyWith(
@@ -117,7 +122,8 @@ class MyProfile extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                    margin: EdgeInsets.only(left: 18.05 * SizeConfig.hmultiplier),
+                    margin:
+                        EdgeInsets.only(left: 18.05 * SizeConfig.hmultiplier),
                     child: Text(
                       'You have attended',
                       style: appText.copyWith(
@@ -167,7 +173,8 @@ class MyProfile extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                    margin: EdgeInsets.only(left: 18.05 * SizeConfig.hmultiplier),
+                    margin:
+                        EdgeInsets.only(left: 18.05 * SizeConfig.hmultiplier),
                     child: Text(
                       'Your Score is',
                       style: appText.copyWith(
@@ -215,34 +222,8 @@ class MyProfile extends StatelessWidget {
             ),
           ]),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color.fromARGB(255, 37, 37, 37),
-          items: [
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                Images.anyImage + "/icons8-detective-96-7.png",
-                width: 13.33 * SizeConfig.hmultiplier,
-                height: 7.14 * SizeConfig.vmultiplier,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                Images.anyImage + "/nav2.png",
-                width: 13.33 * SizeConfig.hmultiplier,
-                height: 7.14 * SizeConfig.vmultiplier,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                Images.anyImage + "/icons8-calendar-500-7.png",
-                width: 13.33 * SizeConfig.hmultiplier,
-                height: 7.14 * SizeConfig.vmultiplier,
-              ),
-              label: '',
-            ),
-          ],
+        bottomNavigationBar: AppBottomNavigation(
+          context: context,
         ),
       ),
     );

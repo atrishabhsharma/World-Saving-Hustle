@@ -27,7 +27,6 @@ class LogIn extends StatelessWidget {
                       top: 92.3 * SizeConfig.vmultiplier,
                       left: 4.2 * SizeConfig.hmultiplier,
                       right: 4.2 * SizeConfig.hmultiplier),
-
                   child: Center(
                     child: Text(
                       Strings.wsh,
@@ -41,13 +40,14 @@ class LogIn extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(
-                          top: 5.9 * SizeConfig.vmultiplier
-                      ),
+                      padding:
+                          EdgeInsets.only(top: 5.9 * SizeConfig.vmultiplier),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                           child: Icon(
                             Icons.navigate_before,
                             color: Colors.white,
@@ -57,7 +57,7 @@ class LogIn extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height:  17.8 * SizeConfig.vmultiplier,
+                      height: 17.8 * SizeConfig.vmultiplier,
                     ),
                     Center(
                       child: Text(
@@ -72,7 +72,7 @@ class LogIn extends StatelessWidget {
                       height: 5.9 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Email ID',
+                      title: 'Email ID',
                       icon: Icon(Icons.email_outlined),
                       height: 7 * SizeConfig.vmultiplier,
                       width: 80.5 * SizeConfig.hmultiplier,
@@ -81,7 +81,7 @@ class LogIn extends StatelessWidget {
                       height: 2.9 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Password',
+                      title: 'Password',
                       icon: Icon(Icons.lock_open_outlined),
                       height: 7 * SizeConfig.vmultiplier,
                       width: 80.5 * SizeConfig.hmultiplier,
@@ -91,11 +91,10 @@ class LogIn extends StatelessWidget {
                     ),
                     AppButtons(
                       title: 'LOGIN',
-                      onpressed: null,
+                      onpressed: 'myprofilepage',
                       width: 41.6 * SizeConfig.hmultiplier,
                       height: 5.9 * SizeConfig.vmultiplier, // add function
                     ),
-
                   ],
                 )
               ],

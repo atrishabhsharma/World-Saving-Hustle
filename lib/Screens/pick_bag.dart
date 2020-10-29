@@ -12,6 +12,7 @@ class Pickabag extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: Container(),
           title: Text(
             "Register",
             textAlign: TextAlign.center,
@@ -23,7 +24,8 @@ class Pickabag extends StatelessWidget {
           centerTitle: true,
           actions: [
             IconButton(
-              onPressed: () => [],
+              onPressed: () =>
+                  Navigator.pushReplacementNamed(context, 'feedbackpage'),
               icon: Image.asset(
                 "assets/images/appbaricon.png",
               ),
@@ -47,13 +49,16 @@ class Pickabag extends StatelessWidget {
                   Container(
                     child: Row(children: <Widget>[
                       Container(
-                        padding: EdgeInsets.only(top: 10.41 * SizeConfig.vmultiplier, left: 16.66 * SizeConfig.hmultiplier),
+                        padding: EdgeInsets.only(
+                            top: 10.41 * SizeConfig.vmultiplier,
+                            left: 16.66 * SizeConfig.hmultiplier),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: FlatButton(
                             height: 15.17 * SizeConfig.vmultiplier,
                             minWidth: 28.33 * SizeConfig.hmultiplier,
-                            onPressed: () => [],
+                            onPressed: () => Navigator.pushReplacementNamed(
+                                context, 'pickabagpage'),
                             color: Colors.grey[700].withOpacity(.7),
                             shape: RoundedRectangleBorder(
                               borderRadius:
@@ -88,13 +93,14 @@ class Pickabag extends StatelessWidget {
                         width: 8.33 * SizeConfig.hmultiplier,
                       ),
                       Container(
-                        padding: const EdgeInsets.only(top: 70),
+                        padding: EdgeInsets.only(top: 70),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: FlatButton(
                             height: 15.17 * SizeConfig.vmultiplier,
                             minWidth: 28.33 * SizeConfig.hmultiplier,
-                            onPressed: () => null,
+                            onPressed: () => Navigator.pushReplacementNamed(
+                                context, 'eventpage'),
                             color: Colors.grey[700].withOpacity(.7),
                             shape: RoundedRectangleBorder(
                               borderRadius:
@@ -139,7 +145,7 @@ class Pickabag extends StatelessWidget {
                         width: 9.72 * SizeConfig.hmultiplier,
                       ),
                       AppTextField(
-                        title: '     Street',
+                        title: 'Street',
                         icon: null,
                         height: 5.2 * SizeConfig.vmultiplier,
                         width: 37.5 * SizeConfig.hmultiplier,
@@ -148,7 +154,7 @@ class Pickabag extends StatelessWidget {
                         width: 5.55 * SizeConfig.hmultiplier,
                       ),
                       AppTextField(
-                        title: '    City',
+                        title: 'City',
                         icon: null,
                         height: 5.2 * SizeConfig.vmultiplier,
                         width: 37.5 * SizeConfig.hmultiplier,
@@ -159,7 +165,7 @@ class Pickabag extends StatelessWidget {
                     height: 2.97 * SizeConfig.vmultiplier,
                   ),
                   AppTextField(
-                    title: '    State',
+                    title: 'State',
                     icon: null,
                     height: 5.2 * SizeConfig.vmultiplier,
                     width: 80.55 * SizeConfig.hmultiplier,
@@ -168,7 +174,7 @@ class Pickabag extends StatelessWidget {
                     height: 2.97 * SizeConfig.vmultiplier,
                   ),
                   AppTextField(
-                    title: '    Zipcode',
+                    title: 'Zipcode',
                     icon: null,
                     height: 5.2 * SizeConfig.vmultiplier,
                     width: 80.55 * SizeConfig.hmultiplier,

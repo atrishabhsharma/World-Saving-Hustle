@@ -10,6 +10,7 @@ class Register extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: Container(),
           title: Text(
             "Register",
             textAlign: TextAlign.center,
@@ -21,7 +22,8 @@ class Register extends StatelessWidget {
           centerTitle: true,
           actions: [
             IconButton(
-              onPressed: () => [],
+              onPressed: () =>
+                  Navigator.pushReplacementNamed(context, 'feedbackpage'),
               icon: Image.asset(
                 Images.anyImage + "/appbaricon.png",
               ),
@@ -43,16 +45,14 @@ class Register extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(
-                        top: 100,
-                        bottom: 330,
-                        left: 70),
+                    margin: EdgeInsets.only(top: 100, bottom: 330, left: 70),
                     child: Align(
                       alignment: Alignment.topLeft,
                       child: FlatButton(
                         height: 102,
                         minWidth: 102,
-                        onPressed: () => [],
+                        onPressed: () => Navigator.pushReplacementNamed(
+                            context, 'pickabagpage'),
                         color: Colors.grey[700].withOpacity(.2),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(50)),
@@ -91,7 +91,8 @@ class Register extends StatelessWidget {
                       child: FlatButton(
                         height: 102,
                         minWidth: 102,
-                        onPressed: () => null,
+                        onPressed: () => Navigator.pushReplacementNamed(
+                            context, 'eventpage'),
                         color: Colors.grey[700].withOpacity(.2),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(50)),

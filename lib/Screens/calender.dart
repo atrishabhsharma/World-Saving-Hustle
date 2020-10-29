@@ -9,8 +9,11 @@ class Calender extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () => Navigator.pop(context)),
         title: Text(
-          "My Profile",
+          "Calender",
           textAlign: TextAlign.center,
           style: appText.copyWith(
               fontSize: 6.66 * SizeConfig.hmultiplier,
@@ -20,7 +23,7 @@ class Calender extends StatelessWidget {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () => [],
+            onPressed: () => Navigator.pushNamed(context, 'feedbackpage'),
             icon: Image.asset(
               Images.anyImage + "/appbaricon.png",
             ),
@@ -44,25 +47,26 @@ class Calender extends StatelessWidget {
               children: [
                 Container(
                   margin: EdgeInsets.only(
-                      top: 7.44 * SizeConfig.vmultiplier,
-                      left: 13.88 * SizeConfig.hmultiplier,
+                    top: 7.44 * SizeConfig.vmultiplier,
+                    left: 13.88 * SizeConfig.hmultiplier,
                   ),
                   child: Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       'Filter By :',
                       style: appText.copyWith(
-                          fontSize:  6.66 * SizeConfig.hmultiplier, fontWeight: FontWeight.w400),
+                          fontSize: 6.66 * SizeConfig.hmultiplier,
+                          fontWeight: FontWeight.w400),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height:  1.48 * SizeConfig.vmultiplier,
+                  height: 1.48 * SizeConfig.vmultiplier,
                 ),
                 Container(
                   margin: EdgeInsets.only(left: 40, right: 40),
-                  height:  7.44 * SizeConfig.vmultiplier,
-                  width:  111.1 * SizeConfig.hmultiplier,
+                  height: 7.44 * SizeConfig.vmultiplier,
+                  width: 111.1 * SizeConfig.hmultiplier,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
                       color: Colors.grey[700].withOpacity(.7),
@@ -75,7 +79,8 @@ class Calender extends StatelessWidget {
                           child: Text(
                             'Range',
                             style: appText.copyWith(
-                                fontSize: 3.88 * SizeConfig.hmultiplier, fontWeight: FontWeight.w600),
+                                fontSize: 3.88 * SizeConfig.hmultiplier,
+                                fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),
@@ -89,7 +94,8 @@ class Calender extends StatelessWidget {
                           child: Text(
                             'Focus',
                             style: appText.copyWith(
-                                fontSize: 3.88 * SizeConfig.hmultiplier , fontWeight: FontWeight.w600),
+                                fontSize: 3.88 * SizeConfig.hmultiplier,
+                                fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),
@@ -103,7 +109,8 @@ class Calender extends StatelessWidget {
                           child: Text(
                             'Area',
                             style: appText.copyWith(
-                                fontSize: 3.88 * SizeConfig.hmultiplier, fontWeight: FontWeight.w600),
+                                fontSize: 3.88 * SizeConfig.hmultiplier,
+                                fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),

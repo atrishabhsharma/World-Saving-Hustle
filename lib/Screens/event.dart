@@ -12,6 +12,7 @@ class Event extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          leading: Container(),
           title: Text(
             "Register",
             textAlign: TextAlign.center,
@@ -23,7 +24,8 @@ class Event extends StatelessWidget {
           centerTitle: true,
           actions: [
             IconButton(
-              onPressed: () => [],
+              onPressed: () =>
+                  Navigator.pushReplacementNamed(context, 'feedbackpage'),
               icon: Image.asset(
                 "assets/images/appbaricon.png",
               ),
@@ -48,15 +50,16 @@ class Event extends StatelessWidget {
                     child: Row(children: <Widget>[
                       Container(
                         padding: EdgeInsets.only(
-                            top: 10.4 * SizeConfig.vmultiplier,
-                            left: 16.6 * SizeConfig.hmultiplier,
+                          top: 10.4 * SizeConfig.vmultiplier,
+                          left: 16.6 * SizeConfig.hmultiplier,
                         ),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: FlatButton(
                             height: 15.17 * SizeConfig.vmultiplier,
                             minWidth: 28.8 * SizeConfig.hmultiplier,
-                            onPressed: () => [],
+                            onPressed: () => Navigator.pushReplacementNamed(
+                                context, 'pickabagpage'),
                             color: Colors.grey[700].withOpacity(.7),
                             shape: RoundedRectangleBorder(
                               borderRadius:
@@ -91,13 +94,15 @@ class Event extends StatelessWidget {
                         width: 8.33 * SizeConfig.hmultiplier,
                       ),
                       Container(
-                        padding: EdgeInsets.only(top: 10.41 * SizeConfig.vmultiplier),
+                        padding: EdgeInsets.only(
+                            top: 10.41 * SizeConfig.vmultiplier),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: FlatButton(
                             height: 15.17 * SizeConfig.vmultiplier,
                             minWidth: 28.8 * SizeConfig.hmultiplier,
-                            onPressed: () => null,
+                            onPressed: () => Navigator.pushReplacementNamed(
+                                context, 'eventpage'),
                             color: Colors.grey[700].withOpacity(.7),
                             shape: RoundedRectangleBorder(
                               borderRadius:
@@ -142,7 +147,7 @@ class Event extends StatelessWidget {
                         width: 9.72 * SizeConfig.hmultiplier,
                       ),
                       AppTextField(
-                        title: '     Street',
+                        title: 'Street',
                         icon: null,
                         height: 5.2 * SizeConfig.vmultiplier,
                         width: 37.5 * SizeConfig.hmultiplier,
@@ -151,10 +156,10 @@ class Event extends StatelessWidget {
                         width: 5.55 * SizeConfig.hmultiplier,
                       ),
                       AppTextField(
-                        title: '    City',
+                        title: 'City',
                         icon: null,
                         height: 5.2 * SizeConfig.vmultiplier,
-                        width:  37.5 * SizeConfig.hmultiplier,
+                        width: 37.5 * SizeConfig.hmultiplier,
                       ),
                     ],
                   ),
@@ -162,7 +167,7 @@ class Event extends StatelessWidget {
                     height: 2.92 * SizeConfig.vmultiplier,
                   ),
                   AppTextField(
-                    title: '    State',
+                    title: 'State',
                     icon: null,
                     height: 5.2 * SizeConfig.vmultiplier,
                     width: 80.55 * SizeConfig.hmultiplier,
@@ -171,7 +176,7 @@ class Event extends StatelessWidget {
                     height: 2.97 * SizeConfig.vmultiplier,
                   ),
                   AppTextField(
-                    title: '    Zipcode',
+                    title: 'Zipcode',
                     icon: null,
                     height: 5.2 * SizeConfig.vmultiplier,
                     width: 80.55 * SizeConfig.hmultiplier,
@@ -180,7 +185,7 @@ class Event extends StatelessWidget {
                     height: 2.97 * SizeConfig.hmultiplier,
                   ),
                   AppTextField(
-                    title: '    Facebook link',
+                    title: 'Facebook link',
                     icon: null,
                     height: 5.2 * SizeConfig.vmultiplier,
                     width: 80.55 * SizeConfig.hmultiplier,

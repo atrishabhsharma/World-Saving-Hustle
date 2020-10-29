@@ -35,7 +35,7 @@ class FeedBack extends StatelessWidget {
                       Strings.wsh,
                       style: appText.copyWith(
                           fontFamily: 'Product Sans',
-                          fontSize:  6.66 * SizeConfig.hmultiplier,
+                          fontSize: 6.66 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
@@ -43,11 +43,14 @@ class FeedBack extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 5.952 * SizeConfig.vmultiplier),
+                      padding:
+                          EdgeInsets.only(top: 5.952 * SizeConfig.vmultiplier),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                           child: Icon(
                             Icons.navigate_before,
                             color: Colors.white,
@@ -60,7 +63,8 @@ class FeedBack extends StatelessWidget {
                       height: 13.39 * SizeConfig.vmultiplier,
                     ),
                     Padding(
-                      padding: EdgeInsets.only(right: 4.16 * SizeConfig.hmultiplier),
+                      padding:
+                          EdgeInsets.only(right: 4.16 * SizeConfig.hmultiplier),
                       child: Text(
                         'Write to Us ;)',
                         style: appText.copyWith(
@@ -73,7 +77,7 @@ class FeedBack extends StatelessWidget {
                       height: 4.46 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Subject',
+                      title: 'Subject',
                       icon: null,
                       height: 5.95 * SizeConfig.vmultiplier,
                       width: 69.44 * SizeConfig.hmultiplier,
@@ -82,7 +86,7 @@ class FeedBack extends StatelessWidget {
                       height: 4.46 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Messages',
+                      title: 'Messages',
                       icon: null,
                       height: 22.3 * SizeConfig.vmultiplier,
                       width: 69.44 * SizeConfig.hmultiplier,

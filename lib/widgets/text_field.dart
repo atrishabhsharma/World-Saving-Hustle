@@ -14,13 +14,16 @@ class AppTextField extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(30)),
-      child: TextField(
-          decoration: InputDecoration(
-              border: InputBorder.none,
-              labelText: title,
-              labelStyle:
-                  TextStyle(color: Colors.grey, fontSize: 18, letterSpacing: 1),
-              suffixIcon: icon)),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 15),
+        child: TextField(
+            decoration: InputDecoration(
+                border: InputBorder.none,
+                labelText: title,
+                labelStyle: TextStyle(
+                    color: Colors.grey, fontSize: 18, letterSpacing: 1),
+                suffixIcon: icon)),
+      ),
     );
   }
 }

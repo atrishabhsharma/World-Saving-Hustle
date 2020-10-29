@@ -4,7 +4,6 @@ import 'package:WSH/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:WSH/utils/config.dart';
 
-
 class VerificationCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -43,11 +42,14 @@ class VerificationCode extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding:  EdgeInsets.only(top: 5.95 * SizeConfig.vmultiplier),
+                      padding:
+                          EdgeInsets.only(top: 5.95 * SizeConfig.vmultiplier),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                           child: Icon(
                             Icons.navigate_before,
                             color: Colors.white,
@@ -82,7 +84,7 @@ class VerificationCode extends StatelessWidget {
                       height: 5.95 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
-                      title: '     Code',
+                      title: 'Code',
                       icon: null,
                       height: 5.95 * SizeConfig.vmultiplier,
                       width: 69.44 * SizeConfig.hmultiplier,
@@ -99,7 +101,9 @@ class VerificationCode extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                                 fontFamily: 'Product Sans'),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'myprofilepage');
+                          },
                         ),
                       ),
                     ),
