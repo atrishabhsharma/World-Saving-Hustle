@@ -3,6 +3,7 @@ import 'package:WSH/utils/style.dart';
 import 'package:WSH/widgets/buttons.dart';
 import 'package:WSH/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:WSH/utils/config.dart';
 
 class FeedBack extends StatelessWidget {
   @override
@@ -24,13 +25,17 @@ class FeedBack extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 620, left: 15, right: 15),
+                  padding: EdgeInsets.only(
+                    top: 92.2 * SizeConfig.vmultiplier,
+                    left: 11.1 * SizeConfig.hmultiplier,
+                    right: 11.1 * SizeConfig.hmultiplier,
+                  ),
                   child: Center(
                     child: Text(
                       Strings.wsh,
                       style: appText.copyWith(
                           fontFamily: 'Product Sans',
-                          fontSize: 24,
+                          fontSize:  6.66 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
@@ -38,7 +43,7 @@ class FeedBack extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 40),
+                      padding: EdgeInsets.only(top: 5.952 * SizeConfig.vmultiplier),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: FlatButton(
@@ -46,53 +51,53 @@ class FeedBack extends StatelessWidget {
                           child: Icon(
                             Icons.navigate_before,
                             color: Colors.white,
-                            size: 50,
+                            size: 13.88 * SizeConfig.hmultiplier,
                           ),
                         ),
                       ),
                     ),
                     SizedBox(
-                      height: 90,
+                      height: 13.39 * SizeConfig.vmultiplier,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 15),
+                      padding: EdgeInsets.only(right: 4.16 * SizeConfig.hmultiplier),
                       child: Text(
                         'Write to Us ;)',
                         style: appText.copyWith(
-                            fontSize: 40,
+                            fontSize: 11.11 * SizeConfig.hmultiplier,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Product Sans'),
                       ),
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 4.46 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Subject',
                       icon: null,
-                      height: 40,
-                      width: 250,
+                      height: 5.95 * SizeConfig.vmultiplier,
+                      width: 69.44 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 4.46 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Messages',
                       icon: null,
-                      height: 150,
-                      width: 250,
+                      height: 22.3 * SizeConfig.vmultiplier,
+                      width: 69.44 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 4.46 * SizeConfig.vmultiplier,
                     ),
                     AppButtons(
                       title: 'SEND',
                       onpressed: null,
-                      width: 150,
-                      height: 40, // add function
+                      width: 41.6 * SizeConfig.hmultiplier,
+                      height: 5.95 * SizeConfig.vmultiplier, // add function
                     ),
                     SizedBox(
-                      height: 80,
+                      height: 11.9 * SizeConfig.vmultiplier,
                     ),
                   ],
                 )

@@ -9,6 +9,7 @@ class SizeConfig {
   static double vmultiplier;
   static double hmultiplier;
 
+
   void init(BoxConstraints constraints, Orientation orientation) {
     if (orientation == Orientation.portrait) {
       _screenwidth = constraints.maxWidth;

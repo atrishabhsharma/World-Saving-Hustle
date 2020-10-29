@@ -5,6 +5,7 @@ import 'package:WSH/widgets/event_container.dart';
 import 'package:WSH/widgets/filterBy_widget.dart';
 import 'package:WSH/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:WSH/utils/config.dart';
 
 class FindAnEvent extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class FindAnEvent extends StatelessWidget {
           "My Profile",
           textAlign: TextAlign.center,
           style: appText.copyWith(
-              fontSize: 24,
+              fontSize: 6.66 * SizeConfig.hmultiplier,
               fontWeight: FontWeight.w400,
               fontFamily: 'Product Sans'),
         ),
@@ -47,17 +48,19 @@ class FindAnEvent extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(top: 25, left: 15),
+                      margin: EdgeInsets.only(
+                          top: 3.72 * SizeConfig.vmultiplier,
+                          left: 4.16 * SizeConfig.hmultiplier,),
                       child: AppTextField(
                         title: '     Search...',
                         icon: null,
-                        height: 40,
-                        width: 250,
+                        height: 3.72 * SizeConfig.vmultiplier,
+                        width: 69.44 * SizeConfig.hmultiplier,
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(
-                        top: 25,
+                        top: 3.72 * SizeConfig.vmultiplier,
                       ),
                       child: FlatButton(
                         onPressed: null,
@@ -72,7 +75,7 @@ class FindAnEvent extends StatelessWidget {
                     Text(
                       'Filter By :',
                       style: appText.copyWith(
-                          fontSize: 24, fontWeight: FontWeight.w400),
+                          fontSize: 6.66 * SizeConfig.hmultiplier, fontWeight: FontWeight.w400),
                     ),
                     FilterByWidget(
                       title: 'Distance',

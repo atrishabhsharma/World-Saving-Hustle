@@ -3,6 +3,7 @@ import 'package:WSH/utils/style.dart';
 import 'package:WSH/widgets/buttons.dart';
 import 'package:WSH/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:WSH/utils/config.dart';
 
 class LogIn extends StatelessWidget {
   @override
@@ -22,13 +23,17 @@ class LogIn extends StatelessWidget {
                       fit: BoxFit.fill),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 620, left: 15, right: 15),
+                  padding: EdgeInsets.only(
+                      top: 92.3 * SizeConfig.vmultiplier,
+                      left: 4.2 * SizeConfig.hmultiplier,
+                      right: 4.2 * SizeConfig.hmultiplier),
+
                   child: Center(
                     child: Text(
                       Strings.wsh,
                       style: appText.copyWith(
                           fontFamily: 'Product Sans',
-                          fontSize: 24,
+                          fontSize: 6.6 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
@@ -36,7 +41,9 @@ class LogIn extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 40),
+                      padding: EdgeInsets.only(
+                          top: 5.9 * SizeConfig.vmultiplier
+                      ),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: FlatButton(
@@ -44,53 +51,51 @@ class LogIn extends StatelessWidget {
                           child: Icon(
                             Icons.navigate_before,
                             color: Colors.white,
-                            size: 50,
+                            size: 13.8 * SizeConfig.hmultiplier,
                           ),
                         ),
                       ),
                     ),
                     SizedBox(
-                      height: 120,
+                      height:  17.8 * SizeConfig.vmultiplier,
                     ),
                     Center(
                       child: Text(
                         'Login!',
                         style: appText.copyWith(
-                            fontSize: 40,
+                            fontSize: 5.95 * SizeConfig.vmultiplier,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Product Sans'),
                       ),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 5.9 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Email ID',
                       icon: Icon(Icons.email_outlined),
-                      height: 45,
-                      width: 290,
+                      height: 7 * SizeConfig.vmultiplier,
+                      width: 80.5 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 2.9 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Password',
                       icon: Icon(Icons.lock_open_outlined),
-                      height: 45,
-                      width: 290,
+                      height: 7 * SizeConfig.vmultiplier,
+                      width: 80.5 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 8 * SizeConfig.vmultiplier,
                     ),
                     AppButtons(
                       title: 'LOGIN',
                       onpressed: null,
-                      width: 150,
-                      height: 40, // add function
+                      width: 41.6 * SizeConfig.hmultiplier,
+                      height: 5.9 * SizeConfig.vmultiplier, // add function
                     ),
-                    SizedBox(
-                      height: 130,
-                    ),
+
                   ],
                 )
               ],

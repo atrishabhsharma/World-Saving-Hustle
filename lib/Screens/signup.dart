@@ -3,6 +3,7 @@ import 'package:WSH/utils/style.dart';
 import 'package:WSH/widgets/buttons.dart';
 import 'package:WSH/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:WSH/utils/config.dart';
 
 class Signup extends StatelessWidget {
   @override
@@ -22,13 +23,17 @@ class Signup extends StatelessWidget {
                       fit: BoxFit.fill),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 620, left: 15, right: 15),
+                  padding: EdgeInsets.only(
+                    top: 92.2 * SizeConfig.vmultiplier,
+                    left: 11.1 * SizeConfig.hmultiplier,
+                    right: 11.1 * SizeConfig.hmultiplier,
+                  ),
                   child: Center(
                     child: Text(
                       Strings.wsh,
                       style: appText.copyWith(
                           fontFamily: 'Product Sans',
-                          fontSize: 24,
+                          fontSize: 6.6 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
@@ -36,7 +41,7 @@ class Signup extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 40),
+                      padding: EdgeInsets.only(top: 5.95 * SizeConfig.vmultiplier),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: FlatButton(
@@ -44,7 +49,7 @@ class Signup extends StatelessWidget {
                           child: Icon(
                             Icons.navigate_before,
                             color: Colors.white,
-                            size: 50,
+                            size: 13.88 * SizeConfig.hmultiplier,
                           ),
                         ),
                       ),
@@ -53,83 +58,83 @@ class Signup extends StatelessWidget {
                       child: Text(
                         'Signup!',
                         style: appText.copyWith(
-                            fontSize: 40,
+                            fontSize: 11.1 * SizeConfig.hmultiplier,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Product Sans'),
                       ),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 5.95 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Name',
                       icon: Icon(Icons.person),
-                      height: 45,
-                      width: 290,
+                      height: 6.69 * SizeConfig.vmultiplier,
+                      width: 80.5 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Phone Number',
                       icon: Icon(Icons.call),
-                      height: 45,
-                      width: 290,
+                      height: 6.69 * SizeConfig.vmultiplier,
+                      width: 80.5 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Email ID',
                       icon: Icon(Icons.email),
-                      height: 45,
-                      width: 290,
+                      height: 6.69 * SizeConfig.vmultiplier,
+                      width: 80.5 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Password',
                       icon: Icon(Icons.lock),
-                      height: 45,
-                      width: 290,
+                      height: 6.69 * SizeConfig.vmultiplier,
+                      width: 80.5 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Confirm Password',
                       icon: Icon(Icons.verified),
-                      height: 45,
-                      width: 290,
+                      height: 6.69 * SizeConfig.vmultiplier,
+                      width: 80.5 * SizeConfig.hmultiplier,
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 2.97 * SizeConfig.vmultiplier,
                     ),
                     AppButtons(
                       title: 'SIGNUP',
                       onpressed: null,
-                      width: 150,
-                      height: 40, // add function
+                      width: 41.6 * SizeConfig.hmultiplier,
+                      height: 5.95 * SizeConfig.vmultiplier, // add function
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     Center(
                         child: Text(
                       '-OR-',
-                      style: appText.copyWith(fontSize: 20),
+                      style: appText.copyWith(fontSize: 5.55 * SizeConfig.hmultiplier),
                     )),
                     SizedBox(
-                      height: 10,
+                      height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     Center(
                         child: Text(
                       'Sign in With',
-                      style: appText.copyWith(fontSize: 15),
+                      style: appText.copyWith(fontSize: 4.16 * SizeConfig.hmultiplier),
                     )),
                     SizedBox(
-                      height: 10,
+                      height: 1.48 * SizeConfig.vmultiplier,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

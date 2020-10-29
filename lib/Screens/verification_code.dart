@@ -1,8 +1,9 @@
 import 'package:WSH/utils/constants.dart';
 import 'package:WSH/utils/style.dart';
-import 'package:WSH/widgets/buttons.dart';
 import 'package:WSH/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:WSH/utils/config.dart';
+
 
 class VerificationCode extends StatelessWidget {
   @override
@@ -24,13 +25,17 @@ class VerificationCode extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 620, left: 15, right: 15),
+                  padding: EdgeInsets.only(
+                    top: 92.2 * SizeConfig.vmultiplier,
+                    left: 11.1 * SizeConfig.hmultiplier,
+                    right: 11.1 * SizeConfig.hmultiplier,
+                  ),
                   child: Center(
                     child: Text(
                       Strings.wsh,
                       style: appText.copyWith(
                           fontFamily: 'Product Sans',
-                          fontSize: 24,
+                          fontSize: 6.66 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w500),
                     ),
                   ),
@@ -38,7 +43,7 @@ class VerificationCode extends StatelessWidget {
                 Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 40),
+                      padding:  EdgeInsets.only(top: 5.95 * SizeConfig.vmultiplier),
                       child: Align(
                         alignment: Alignment.bottomLeft,
                         child: FlatButton(
@@ -46,41 +51,41 @@ class VerificationCode extends StatelessWidget {
                           child: Icon(
                             Icons.navigate_before,
                             color: Colors.white,
-                            size: 50,
+                            size: 13.88 * SizeConfig.hmultiplier,
                           ),
                         ),
                       ),
                     ),
                     SizedBox(
-                      height: 120,
+                      height: 17.85 * SizeConfig.vmultiplier,
                     ),
                     Text(
                       'Ah, Registered!',
                       style: appText.copyWith(
-                          fontSize: 40,
+                          fontSize: 11.11 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w500,
                           fontFamily: 'Product Sans'),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 2.97 * SizeConfig.vmultiplier,
                     ),
                     Center(
                       child: Text(
                         Strings.verificationCode,
                         style: appText.copyWith(
-                            fontSize: 20,
+                            fontSize: 5.55 * SizeConfig.hmultiplier,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Product Sans'),
                       ),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 5.95 * SizeConfig.vmultiplier,
                     ),
                     AppTextField(
                       title: '     Code',
                       icon: null,
-                      height: 40,
-                      width: 250,
+                      height: 5.95 * SizeConfig.vmultiplier,
+                      width: 69.44 * SizeConfig.hmultiplier,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 40),
@@ -90,28 +95,13 @@ class VerificationCode extends StatelessWidget {
                           child: Text(
                             'Send Again',
                             style: appText.copyWith(
-                                fontSize: 20,
+                                fontSize: 5.55 * SizeConfig.hmultiplier,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: 'Product Sans'),
                           ),
                           onPressed: () {},
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    AppButtons(
-                      title: 'LOGIN',
-                      onpressed: null,
-                      width: 150,
-                      height: 40, // add function
-                    ),
-                    SizedBox(
-                      height: 70,
                     ),
                   ],
                 )

@@ -2,6 +2,7 @@ import 'package:WSH/utils/constants.dart';
 import 'package:WSH/utils/style.dart';
 import 'package:WSH/widgets/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:WSH/utils/config.dart';
 
 class Register extends StatelessWidget {
   @override
@@ -13,7 +14,7 @@ class Register extends StatelessWidget {
             "Register",
             textAlign: TextAlign.center,
             style: appText.copyWith(
-                fontSize: 24,
+                fontSize: 6.66 * SizeConfig.hmultiplier,
                 fontWeight: FontWeight.w400,
                 fontFamily: 'Product Sans'),
           ),
@@ -42,7 +43,10 @@ class Register extends StatelessWidget {
               Row(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(top: 100, bottom: 330, left: 70),
+                    margin: EdgeInsets.only(
+                        top: 100,
+                        bottom: 330,
+                        left: 70),
                     child: Align(
                       alignment: Alignment.topLeft,
                       child: FlatButton(

@@ -1,6 +1,7 @@
 import 'package:WSH/utils/constants.dart';
 import 'package:WSH/utils/style.dart';
 import 'package:flutter/material.dart';
+import 'package:WSH/utils/config.dart';
 
 class MyProfile extends StatelessWidget {
   @override
@@ -12,7 +13,7 @@ class MyProfile extends StatelessWidget {
             "My Profile",
             textAlign: TextAlign.center,
             style: appText.copyWith(
-                fontSize: 24,
+                fontSize: 6.66 * SizeConfig.hmultiplier,
                 fontWeight: FontWeight.w400,
                 fontFamily: 'Product Sans'),
           ),
@@ -40,7 +41,7 @@ class MyProfile extends StatelessWidget {
             Container(
               child: Column(children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 30),
+                  padding: EdgeInsets.only(top: 4.46 * SizeConfig.vmultiplier),
                   child: Center(
                     child: Image.asset(
                       Images.anyImage + '/picture-3.png',
@@ -49,48 +50,48 @@ class MyProfile extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 1.48 * SizeConfig.vmultiplier,
                 ),
                 Center(
                   child: Text(
                     'Martin Skadal',
                     style: appText.copyWith(
-                        fontSize: 22,
+                        fontSize: 6.1 * SizeConfig.hmultiplier,
                         fontWeight: FontWeight.w400,
                         fontFamily: 'Product Sans'),
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 5.95 * SizeConfig.vmultiplier,
                 ),
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                    margin: EdgeInsets.only(left: 65),
+                    margin: EdgeInsets.only(left: 18.05 * SizeConfig.hmultiplier,),
                     child: Text(
                       'You have picked',
                       style: appText.copyWith(
-                          fontSize: 20,
+                          fontSize: 5.55 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'Product Sans'),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 6,
+                  height: 0.89 * SizeConfig.vmultiplier,
                 ),
                 Container(
-                  height: 45,
+                  height: 6.69 * SizeConfig.vmultiplier,
                   child: Stack(
                     children: [
                       Center(
                         child: Container(
-                          height: 45,
-                          width: 300,
+                          height: 6.69 * SizeConfig.vmultiplier,
+                          width: 83.33 * SizeConfig.hmultiplier,
                           decoration: BoxDecoration(
                             color: Colors.grey.shade800,
                             border: Border.all(
-                              width: 2,
+                              width: .55 * SizeConfig.hmultiplier,
                               color: Colors.white,
                             ),
                             borderRadius:
@@ -102,7 +103,7 @@ class MyProfile extends StatelessWidget {
                         child: Text(
                           "2490.32 Kg",
                           style: appText.copyWith(
-                              fontSize: 24,
+                              fontSize: 6.66 * SizeConfig.hmultiplier,
                               fontWeight: FontWeight.w700,
                               fontFamily: 'Product Sans'),
                         ),
@@ -111,36 +112,36 @@ class MyProfile extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 3.72 * SizeConfig.vmultiplier,
                 ),
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                    margin: EdgeInsets.only(left: 65),
+                    margin: EdgeInsets.only(left: 18.05 * SizeConfig.hmultiplier),
                     child: Text(
                       'You have attended',
                       style: appText.copyWith(
-                          fontSize: 20,
+                          fontSize: 5.55 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'Product Sans'),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 6,
+                  height: .89 * SizeConfig.vmultiplier,
                 ),
                 Container(
-                  height: 45,
+                  height: 6.69 * SizeConfig.vmultiplier,
                   child: Stack(
                     children: [
                       Center(
                         child: Container(
-                          height: 45,
-                          width: 300,
+                          height: 6.69 * SizeConfig.vmultiplier,
+                          width: 83.33 * SizeConfig.hmultiplier,
                           decoration: BoxDecoration(
                             color: Colors.grey.shade800,
                             border: Border.all(
-                              width: 2,
+                              width: .833 * SizeConfig.hmultiplier,
                               color: Colors.white,
                             ),
                             borderRadius:
@@ -152,7 +153,7 @@ class MyProfile extends StatelessWidget {
                         child: Text(
                           "52 Events",
                           style: appText.copyWith(
-                              fontSize: 24,
+                              fontSize: 6.66 * SizeConfig.hmultiplier,
                               fontWeight: FontWeight.w700,
                               fontFamily: 'Product Sans'),
                         ),
@@ -161,36 +162,36 @@ class MyProfile extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 3.72 * SizeConfig.vmultiplier,
                 ),
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                    margin: EdgeInsets.only(left: 65),
+                    margin: EdgeInsets.only(left: 18.05 * SizeConfig.hmultiplier),
                     child: Text(
                       'Your Score is',
                       style: appText.copyWith(
-                          fontSize: 20,
+                          fontSize: 5.55 * SizeConfig.hmultiplier,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'Product Sans'),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 6,
+                  height: .89 * SizeConfig.vmultiplier,
                 ),
                 Container(
-                  height: 45,
+                  height: 6.69 * SizeConfig.vmultiplier,
                   child: Stack(
                     children: [
                       Center(
                         child: Container(
-                          height: 45,
-                          width: 300,
+                          height: 6.69 * SizeConfig.vmultiplier,
+                          width: 83.33 * SizeConfig.hmultiplier,
                           decoration: BoxDecoration(
                             color: Colors.grey.shade800,
                             border: Border.all(
-                              width: 2,
+                              width: .55 * SizeConfig.hmultiplier,
                               color: Colors.white,
                             ),
                             borderRadius:
@@ -202,7 +203,7 @@ class MyProfile extends StatelessWidget {
                         child: Text(
                           "32,456 Points",
                           style: appText.copyWith(
-                              fontSize: 24,
+                              fontSize: 6.66 * SizeConfig.hmultiplier,
                               fontWeight: FontWeight.w700,
                               fontFamily: 'Product Sans'),
                         ),
@@ -220,24 +221,24 @@ class MyProfile extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Image.asset(
                 Images.anyImage + "/icons8-detective-96-7.png",
-                width: 48,
-                height: 48,
+                width: 13.33 * SizeConfig.hmultiplier,
+                height: 7.14 * SizeConfig.vmultiplier,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
                 Images.anyImage + "/nav2.png",
-                width: 48,
-                height: 48,
+                width: 13.33 * SizeConfig.hmultiplier,
+                height: 7.14 * SizeConfig.vmultiplier,
               ),
               label: '',
             ),
             BottomNavigationBarItem(
               icon: Image.asset(
                 Images.anyImage + "/icons8-calendar-500-7.png",
-                width: 48,
-                height: 48,
+                width: 13.33 * SizeConfig.hmultiplier,
+                height: 7.14 * SizeConfig.vmultiplier,
               ),
               label: '',
             ),

@@ -25,6 +25,23 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'World Saving Hustle',
+          home: FindAnEvent(),
+        );
+      });
+    });
+  }
+}
+
+
+/*class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      return OrientationBuilder(builder: (context, orientation) {
+        SizeConfig().init(constraints, orientation);
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'World Saving Hustle',
           initialRoute: 'landingpage',
           routes: {
             'landingpage': (context) => LandingPage(),
@@ -45,3 +62,4 @@ class MyApp extends StatelessWidget {
     });
   }
 }
+*/

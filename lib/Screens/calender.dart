@@ -2,6 +2,7 @@ import 'package:WSH/utils/constants.dart';
 import 'package:WSH/utils/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:WSH/utils/config.dart';
 
 class Calender extends StatelessWidget {
   @override
@@ -12,7 +13,7 @@ class Calender extends StatelessWidget {
           "My Profile",
           textAlign: TextAlign.center,
           style: appText.copyWith(
-              fontSize: 24,
+              fontSize: 6.66 * SizeConfig.hmultiplier,
               fontWeight: FontWeight.w400,
               fontFamily: 'Product Sans'),
         ),
@@ -42,23 +43,26 @@ class Calender extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 50, left: 50),
+                  margin: EdgeInsets.only(
+                      top: 7.44 * SizeConfig.vmultiplier,
+                      left: 13.88 * SizeConfig.hmultiplier,
+                  ),
                   child: Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       'Filter By :',
                       style: appText.copyWith(
-                          fontSize: 24, fontWeight: FontWeight.w400),
+                          fontSize:  6.66 * SizeConfig.hmultiplier, fontWeight: FontWeight.w400),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height:  1.48 * SizeConfig.vmultiplier,
                 ),
                 Container(
                   margin: EdgeInsets.only(left: 40, right: 40),
-                  height: 50,
-                  width: 400,
+                  height:  7.44 * SizeConfig.vmultiplier,
+                  width:  111.1 * SizeConfig.hmultiplier,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
                       color: Colors.grey[700].withOpacity(.7),
@@ -71,12 +75,12 @@ class Calender extends StatelessWidget {
                           child: Text(
                             'Range',
                             style: appText.copyWith(
-                                fontSize: 14, fontWeight: FontWeight.w600),
+                                fontSize: 3.88 * SizeConfig.hmultiplier, fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),
                       VerticalDivider(
-                        width: 5,
+                        width: 1.38 * SizeConfig.hmultiplier,
                         color: Colors.white,
                       ),
                       FlatButton(
@@ -85,12 +89,12 @@ class Calender extends StatelessWidget {
                           child: Text(
                             'Focus',
                             style: appText.copyWith(
-                                fontSize: 14, fontWeight: FontWeight.w600),
+                                fontSize: 3.88 * SizeConfig.hmultiplier , fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),
                       VerticalDivider(
-                        width: 5,
+                        width: 1.38 * SizeConfig.hmultiplier,
                         color: Colors.white,
                       ),
                       FlatButton(
@@ -99,7 +103,7 @@ class Calender extends StatelessWidget {
                           child: Text(
                             'Area',
                             style: appText.copyWith(
-                                fontSize: 14, fontWeight: FontWeight.w600),
+                                fontSize: 3.88 * SizeConfig.hmultiplier, fontWeight: FontWeight.w600),
                           ),
                         ),
                       ),
@@ -109,10 +113,10 @@ class Calender extends StatelessWidget {
 
                 // Container(child: Image.asset(Images.anyImage + '/'),)
                 Container(
-                  margin: EdgeInsets.only(top: 40),
+                  margin: EdgeInsets.only(top: 5.95 * SizeConfig.vmultiplier),
                   child: Icon(
                     Icons.calendar_today,
-                    size: 300,
+                    size: 83.33 * SizeConfig.hmultiplier,
                     color: Colors.white,
                   ),
                 )

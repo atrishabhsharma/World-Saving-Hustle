@@ -4,6 +4,7 @@ import 'package:WSH/widgets/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:WSH/widgets/text_field.dart';
 import 'package:WSH/widgets/buttons.dart';
+import 'package:WSH/utils/config.dart';
 
 class Event extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class Event extends StatelessWidget {
             "Register",
             textAlign: TextAlign.center,
             style: appText.copyWith(
-                fontSize: 24,
+                fontSize: 6.6 * SizeConfig.hmultiplier,
                 fontWeight: FontWeight.w400,
                 fontFamily: 'Product Sans'),
           ),
@@ -46,12 +47,15 @@ class Event extends StatelessWidget {
                   Container(
                     child: Row(children: <Widget>[
                       Container(
-                        padding: const EdgeInsets.only(top: 70, left: 60),
+                        padding: EdgeInsets.only(
+                            top: 10.4 * SizeConfig.vmultiplier,
+                            left: 16.6 * SizeConfig.hmultiplier,
+                        ),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: FlatButton(
-                            height: 102,
-                            minWidth: 102,
+                            height: 15.17 * SizeConfig.vmultiplier,
+                            minWidth: 28.8 * SizeConfig.hmultiplier,
                             onPressed: () => [],
                             color: Colors.grey[700].withOpacity(.7),
                             shape: RoundedRectangleBorder(
@@ -68,13 +72,13 @@ class Event extends StatelessWidget {
                                     Images.anyImage + "/pickabag.png",
                                   ),
                                   SizedBox(
-                                    height: 3,
+                                    height: 0.45 * SizeConfig.vmultiplier,
                                   ),
                                   Text(
                                     "PICKABAG",
                                     textAlign: TextAlign.left,
                                     style: appText.copyWith(
-                                        fontSize: 14,
+                                        fontSize: 3.88 * SizeConfig.hmultiplier,
                                         fontWeight: FontWeight.w400,
                                         fontFamily: 'Product Sans'),
                                   ),
@@ -84,15 +88,15 @@ class Event extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 30,
+                        width: 8.33 * SizeConfig.hmultiplier,
                       ),
                       Container(
-                        padding: const EdgeInsets.only(top: 70),
+                        padding: EdgeInsets.only(top: 10.41 * SizeConfig.vmultiplier),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: FlatButton(
-                            height: 102,
-                            minWidth: 102,
+                            height: 15.17 * SizeConfig.vmultiplier,
+                            minWidth: 28.8 * SizeConfig.hmultiplier,
                             onPressed: () => null,
                             color: Colors.grey[700].withOpacity(.7),
                             shape: RoundedRectangleBorder(
@@ -109,13 +113,13 @@ class Event extends StatelessWidget {
                                     Images.anyImage + "/shoppingbag.png",
                                   ),
                                   SizedBox(
-                                    height: 3,
+                                    height: 0.45 * SizeConfig.vmultiplier,
                                   ),
                                   Text(
                                     "EVENTS",
                                     textAlign: TextAlign.left,
                                     style: appText.copyWith(
-                                        fontSize: 14,
+                                        fontSize: 3.88 * SizeConfig.hmultiplier,
                                         fontWeight: FontWeight.w400,
                                         fontFamily: 'Product Sans'),
                                   ),
@@ -130,65 +134,65 @@ class Event extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height: 200,
+                    height: 29.76 * SizeConfig.vmultiplier,
                   ),
                   Row(
                     children: <Widget>[
                       SizedBox(
-                        width: 35,
+                        width: 9.72 * SizeConfig.hmultiplier,
                       ),
                       AppTextField(
                         title: '     Street',
                         icon: null,
-                        height: 35,
-                        width: 135,
+                        height: 5.2 * SizeConfig.vmultiplier,
+                        width: 37.5 * SizeConfig.hmultiplier,
                       ),
                       SizedBox(
-                        width: 20,
+                        width: 5.55 * SizeConfig.hmultiplier,
                       ),
                       AppTextField(
                         title: '    City',
                         icon: null,
-                        height: 35,
-                        width: 135,
+                        height: 5.2 * SizeConfig.vmultiplier,
+                        width:  37.5 * SizeConfig.hmultiplier,
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 2.92 * SizeConfig.vmultiplier,
                   ),
                   AppTextField(
                     title: '    State',
                     icon: null,
-                    height: 35,
-                    width: 290,
+                    height: 5.2 * SizeConfig.vmultiplier,
+                    width: 80.55 * SizeConfig.hmultiplier,
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 2.97 * SizeConfig.vmultiplier,
                   ),
                   AppTextField(
                     title: '    Zipcode',
                     icon: null,
-                    height: 35,
-                    width: 290,
+                    height: 5.2 * SizeConfig.vmultiplier,
+                    width: 80.55 * SizeConfig.hmultiplier,
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 2.97 * SizeConfig.hmultiplier,
                   ),
                   AppTextField(
-                    title: '    FaceBook link',
+                    title: '    Facebook link',
                     icon: null,
-                    height: 35,
-                    width: 290,
+                    height: 5.2 * SizeConfig.vmultiplier,
+                    width: 80.55 * SizeConfig.hmultiplier,
                   ),
                   SizedBox(
-                    height: 70,
+                    height: 10.41 * SizeConfig.vmultiplier,
                   ),
                   AppButtons(
                     title: 'REGISTER',
                     onpressed: null,
-                    width: 150,
-                    height: 40, // add function
+                    width: 41.66 * SizeConfig.hmultiplier,
+                    height: 5.95 * SizeConfig.vmultiplier, // add function
                   ),
                 ],
               )
