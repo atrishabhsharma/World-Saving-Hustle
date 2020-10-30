@@ -12,6 +12,7 @@ class LogIn extends StatelessWidget {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Container(
+            height: 100 * SizeConfig.vmultiplier,
             child: Stack(
               children: [
                 Positioned(
