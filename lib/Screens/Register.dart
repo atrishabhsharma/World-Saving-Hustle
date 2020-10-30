@@ -45,92 +45,96 @@ class Register extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    child: Row(children: <Widget>[
-                      Container(
-                        padding: EdgeInsets.only(
-                          top: 10.4 * SizeConfig.vmultiplier,
-                          left: 16.6 * SizeConfig.hmultiplier,
-                        ),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: FlatButton(
-                            height: 15.17 * SizeConfig.vmultiplier,
-                            minWidth: 28.8 * SizeConfig.hmultiplier,
-                            onPressed: () => Navigator.pushReplacementNamed(
-                                context, 'pickabagpage'),
-                            color: Colors.grey[700].withOpacity(.7),
-                            shape: RoundedRectangleBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(50)),
-                              side: BorderSide(
-                                color: Colors.white,
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.only(
+                              top: 10.4 * SizeConfig.vmultiplier,
+                            ),
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child: FlatButton(
+                                height: 15.17 * SizeConfig.vmultiplier,
+                                minWidth: 28.8 * SizeConfig.hmultiplier,
+                                onPressed: () => Navigator.pushReplacementNamed(
+                                    context, 'pickabagpage'),
+                                color: Colors.grey[700].withOpacity(.7),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50)),
+                                  side: BorderSide(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        Images.anyImage + "/pickabag.png",
+                                      ),
+                                      SizedBox(
+                                        height: 0.45 * SizeConfig.vmultiplier,
+                                      ),
+                                      Text(
+                                        "PICKABAG",
+                                        textAlign: TextAlign.left,
+                                        style: appText.copyWith(
+                                            fontSize:
+                                                3.88 * SizeConfig.hmultiplier,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: 'Product Sans'),
+                                      ),
+                                      // addd
+                                    ]),
                               ),
                             ),
-                            child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    Images.anyImage + "/pickabag.png",
-                                  ),
-                                  SizedBox(
-                                    height: 0.45 * SizeConfig.vmultiplier,
-                                  ),
-                                  Text(
-                                    "PICKABAG",
-                                    textAlign: TextAlign.left,
-                                    style: appText.copyWith(
-                                        fontSize: 3.88 * SizeConfig.hmultiplier,
-                                        fontWeight: FontWeight.w400,
-                                        fontFamily: 'Product Sans'),
-                                  ),
-                                  // addd
-                                ]),
                           ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 8.33 * SizeConfig.hmultiplier,
-                      ),
-                      Container(
-                        padding: EdgeInsets.only(
-                            top: 10.41 * SizeConfig.vmultiplier),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: FlatButton(
-                            height: 15.17 * SizeConfig.vmultiplier,
-                            minWidth: 28.8 * SizeConfig.hmultiplier,
-                            onPressed: () => Navigator.pushReplacementNamed(
-                                context, 'eventpage'),
-                            color: Colors.grey[700].withOpacity(.7),
-                            shape: RoundedRectangleBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(50)),
-                              side: BorderSide(
-                                color: Colors.white,
+                          SizedBox(
+                            width: 8.33 * SizeConfig.hmultiplier,
+                          ),
+                          Container(
+                            padding: EdgeInsets.only(
+                                top: 10.41 * SizeConfig.vmultiplier),
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child: FlatButton(
+                                height: 15.17 * SizeConfig.vmultiplier,
+                                minWidth: 28.8 * SizeConfig.hmultiplier,
+                                onPressed: () => Navigator.pushReplacementNamed(
+                                    context, 'eventpage'),
+                                color: Colors.grey[700].withOpacity(.7),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(50)),
+                                  side: BorderSide(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        Images.anyImage + "/shoppingbag.png",
+                                      ),
+                                      SizedBox(
+                                        height: 0.45 * SizeConfig.vmultiplier,
+                                      ),
+                                      Text(
+                                        "EVENTS",
+                                        textAlign: TextAlign.left,
+                                        style: appText.copyWith(
+                                            fontSize:
+                                                3.88 * SizeConfig.hmultiplier,
+                                            fontWeight: FontWeight.w400,
+                                            fontFamily: 'Product Sans'),
+                                      ),
+                                    ]),
                               ),
                             ),
-                            child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    Images.anyImage + "/shoppingbag.png",
-                                  ),
-                                  SizedBox(
-                                    height: 0.45 * SizeConfig.vmultiplier,
-                                  ),
-                                  Text(
-                                    "EVENTS",
-                                    textAlign: TextAlign.left,
-                                    style: appText.copyWith(
-                                        fontSize: 3.88 * SizeConfig.hmultiplier,
-                                        fontWeight: FontWeight.w400,
-                                        fontFamily: 'Product Sans'),
-                                  ),
-                                ]),
                           ),
-                        ),
-                      ),
-                    ]),
+                        ]),
                   ),
                 ],
               ),
@@ -142,5 +146,3 @@ class Register extends StatelessWidget {
     );
   }
 }
-
-

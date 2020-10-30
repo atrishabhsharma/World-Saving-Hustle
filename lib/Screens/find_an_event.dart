@@ -14,7 +14,7 @@ class FindAnEvent extends StatelessWidget {
       appBar: AppBar(
         leading: Container(),
         title: Text(
-          "My Profile",
+          "Find An Event",
           textAlign: TextAlign.center,
           style: appText.copyWith(
               fontSize: 6.66 * SizeConfig.hmultiplier,
@@ -44,69 +44,73 @@ class FindAnEvent extends StatelessWidget {
               child: Image.asset(Images.anyImage + '/background.png',
                   fit: BoxFit.fill),
             ),
-            Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: 3.72 * SizeConfig.vmultiplier,
-                        left: 4.16 * SizeConfig.hmultiplier,
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SingleChildScrollView(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            top: 3.72 * SizeConfig.vmultiplier,
+                            left: 4.16 * SizeConfig.hmultiplier,
+                          ),
+                          child: AppTextField(
+                            title: 'Search...',
+                            icon: null,
+                            height: 3.72 * SizeConfig.vmultiplier,
+                            width: 69.44 * SizeConfig.hmultiplier,
+                          ),
+                        ),
                       ),
-                      child: AppTextField(
-                        title: 'Search...',
-                        icon: null,
-                        height: 3.72 * SizeConfig.vmultiplier,
-                        width: 69.44 * SizeConfig.hmultiplier,
+                      Container(
+                        margin: EdgeInsets.only(
+                          top: 3.72 * SizeConfig.vmultiplier,
+                        ),
+                        child: FlatButton(
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(
+                                context, 'calenderpage');
+                          },
+                          child: Image.asset(Images.anyImage + '/calendar.png'),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Filter By :',
+                        style: appText.copyWith(
+                            fontSize: 6.66 * SizeConfig.hmultiplier,
+                            fontWeight: FontWeight.w400),
                       ),
-                    ),
-
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: 3.72 * SizeConfig.vmultiplier,
+                      FilterByWidget(
+                        title: 'Distance',
+                        onPressed: null,
                       ),
-                      child: FlatButton(
-                        onPressed: () {
-                          Navigator.pushReplacementNamed(
-                              context, 'calenderpage');
-                        },
-                        child: Image.asset(Images.anyImage + '/calendar.png'),
+                      FilterByWidget(
+                        title: 'Date',
+                        onPressed: null,
                       ),
-                    )
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Filter By :',
-                      style: appText.copyWith(
-                          fontSize: 6.66 * SizeConfig.hmultiplier,
-                          fontWeight: FontWeight.w400),
-                    ),
-                    FilterByWidget(
-                      title: 'Distance',
-                      onPressed: null,
-                    ),
-                    FilterByWidget(
-                      title: 'Date',
-                      onPressed: null,
-                    ),
-                  ],
-                ),
-                Container(
-                  //TOD0: Dynamic change (needed)_
-                  height: 61 * SizeConfig.vmultiplier,
-                  child: ListView.builder(
-                      itemCount: 6,
-                      itemBuilder: (context, index) {
-                        return Container(
-                            margin: EdgeInsets.all(2.77 * SizeConfig.hmultiplier),
-                            child: EventContainer());
-                      }),
-                ),
-              ],
+                    ],
+                  ),
+                  Container(
+                    //TOD0: Dynamic change (needed)_
+                    height: 61 * SizeConfig.vmultiplier,
+                    child: ListView.builder(
+                        itemCount: 6,
+                        itemBuilder: (context, index) {
+                          return Container(
+                              margin:
+                                  EdgeInsets.all(2.77 * SizeConfig.hmultiplier),
+                              child: EventContainer());
+                        }),
+                  ),
+                ],
+              ),
             )
           ],
         ),
