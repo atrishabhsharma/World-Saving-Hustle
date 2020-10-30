@@ -34,6 +34,9 @@ class FindAnEvent extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 37, 37, 37),
       ),
       body: Container(
+        //TODO: change this
+
+        height: 90 * SizeConfig.vmultiplier,
         child: Stack(
           children: [
             Positioned(
