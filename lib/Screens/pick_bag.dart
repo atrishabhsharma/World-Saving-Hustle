@@ -36,7 +36,7 @@ class Pickabag extends StatelessWidget {
         body: SingleChildScrollView(
           child: Container(
             //TODO: This is Added
-            height: 149.4 * SizeConfig.hmultiplier,
+            height: 169 * SizeConfig.hmultiplier,
             child: Stack(
               children: [
                 Positioned(
