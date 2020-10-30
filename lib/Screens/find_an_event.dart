@@ -61,6 +61,7 @@ class FindAnEvent extends StatelessWidget {
                         width: 69.44 * SizeConfig.hmultiplier,
                       ),
                     ),
+
                     Container(
                       margin: EdgeInsets.only(
                         top: 3.72 * SizeConfig.vmultiplier,
@@ -96,12 +97,12 @@ class FindAnEvent extends StatelessWidget {
                 ),
                 Container(
                   //TOD0: Dynamic change (needed)_
-                  height: 410,
+                  height: 61 * SizeConfig.vmultiplier,
                   child: ListView.builder(
                       itemCount: 6,
                       itemBuilder: (context, index) {
                         return Container(
-                            margin: EdgeInsets.all(10),
+                            margin: EdgeInsets.all(2.77 * SizeConfig.hmultiplier),
                             child: EventContainer());
                       }),
                 ),

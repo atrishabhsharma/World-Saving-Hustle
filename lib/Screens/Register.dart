@@ -42,84 +42,95 @@ class Register extends StatelessWidget {
                 child: Image.asset(Images.anyImage + '/background.png',
                     fit: BoxFit.fill),
               ),
-              Row(
-                children: <Widget>[
+              Column(
+                children: [
                   Container(
-                    margin: EdgeInsets.only(top: 100, bottom: 330, left: 70),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: FlatButton(
-                        height: 102,
-                        minWidth: 102,
-                        onPressed: () => Navigator.pushReplacementNamed(
-                            context, 'pickabagpage'),
-                        color: Colors.grey[700].withOpacity(.2),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(50)),
-                          side: BorderSide(
-                            color: Colors.white,
+                    child: Row(children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.only(
+                          top: 10.4 * SizeConfig.vmultiplier,
+                          left: 16.6 * SizeConfig.hmultiplier,
+                        ),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: FlatButton(
+                            height: 15.17 * SizeConfig.vmultiplier,
+                            minWidth: 28.8 * SizeConfig.hmultiplier,
+                            onPressed: () => Navigator.pushReplacementNamed(
+                                context, 'pickabagpage'),
+                            color: Colors.grey[700].withOpacity(.7),
+                            shape: RoundedRectangleBorder(
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(50)),
+                              side: BorderSide(
+                                color: Colors.white,
+                              ),
+                            ),
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    Images.anyImage + "/pickabag.png",
+                                  ),
+                                  SizedBox(
+                                    height: 0.45 * SizeConfig.vmultiplier,
+                                  ),
+                                  Text(
+                                    "PICKABAG",
+                                    textAlign: TextAlign.left,
+                                    style: appText.copyWith(
+                                        fontSize: 3.88 * SizeConfig.hmultiplier,
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'Product Sans'),
+                                  ),
+                                  // addd
+                                ]),
                           ),
                         ),
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                Images.anyImage + "/pickabag.png",
-                              ),
-                              SizedBox(
-                                height: 3,
-                              ),
-                              Text(
-                                "PICKABAG",
-                                textAlign: TextAlign.left,
-                                style: appText.copyWith(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: 'Product Sans'),
-                              ),
-                            ]),
                       ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 100, bottom: 330),
-                    child: Align(
-                      alignment: Alignment.topLeft,
-                      child: FlatButton(
-                        height: 102,
-                        minWidth: 102,
-                        onPressed: () => Navigator.pushReplacementNamed(
-                            context, 'eventpage'),
-                        color: Colors.grey[700].withOpacity(.2),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(50)),
-                          side: BorderSide(
-                            color: Colors.white,
+                      SizedBox(
+                        width: 8.33 * SizeConfig.hmultiplier,
+                      ),
+                      Container(
+                        padding: EdgeInsets.only(
+                            top: 10.41 * SizeConfig.vmultiplier),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: FlatButton(
+                            height: 15.17 * SizeConfig.vmultiplier,
+                            minWidth: 28.8 * SizeConfig.hmultiplier,
+                            onPressed: () => Navigator.pushReplacementNamed(
+                                context, 'eventpage'),
+                            color: Colors.grey[700].withOpacity(.7),
+                            shape: RoundedRectangleBorder(
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(50)),
+                              side: BorderSide(
+                                color: Colors.white,
+                              ),
+                            ),
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset(
+                                    Images.anyImage + "/shoppingbag.png",
+                                  ),
+                                  SizedBox(
+                                    height: 0.45 * SizeConfig.vmultiplier,
+                                  ),
+                                  Text(
+                                    "EVENTS",
+                                    textAlign: TextAlign.left,
+                                    style: appText.copyWith(
+                                        fontSize: 3.88 * SizeConfig.hmultiplier,
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'Product Sans'),
+                                  ),
+                                ]),
                           ),
                         ),
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(
-                                Images.anyImage + "/shoppingbag.png",
-                              ),
-                              SizedBox(
-                                height: 3,
-                              ),
-                              Text(
-                                "EVENTS",
-                                textAlign: TextAlign.left,
-                                style: appText.copyWith(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: 'Product Sans'),
-                              ),
-                            ]),
                       ),
-                    ),
+                    ]),
                   ),
                 ],
               ),
@@ -131,3 +142,5 @@ class Register extends StatelessWidget {
     );
   }
 }
+
+
